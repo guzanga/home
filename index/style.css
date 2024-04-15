@@ -1,0 +1,364 @@
+*{
+    padding: 0px;
+    margin:0px;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    width: 14px; /* Largura da barra de rolagem */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+     /* Cor do polegar da barra de rolagem (parte que você arrasta) */
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #000000;
+     /* Cor da pista da barra de rolagem (fundo) */
+}
+
+:root{
+    --preto-negao: #000000;
+    --white-fundo: #fff;
+    --azul-claro-login-engrenagem-user-logo: #E6F2FF;
+    --azul-hoverIcons: #c6e2ff;
+    --azul-header-saldo: #00639E;
+    --azul-icons78: #000C73;
+    --azul-GustavoDonato: #1B4965;
+    --azul-btn-login: #090963;
+    --cinza-eye78-inserir-conta: #C1C1C1;
+    --cinza-fundo: #F0F0F0;
+    --cinza-nao-possui-conta: #676767;
+    --cinza-lancamento: #747B7E;
+    --cinza-linksHeader: #b5b5b5;
+    --cinza-header-hover: #919191;
+    --vermelho-despesa: #C50C0C;
+    --verde-receita: #09AF10;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header{
+    background-color: var(--azul-header-saldo);
+    padding: 7px;
+    align-items: center;
+}
+
+.div-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#title-logo{
+    font-size: 30px;
+    color: var(--white-fundo);
+    font-weight: bold;
+}
+
+#logo{
+    font-size: 40px;
+    padding-right: 10px;
+    color: var(--azul-claro-login-engrenagem-user-logo);
+    padding-top: 13px;
+}
+
+#logo:hover{
+    animation-delay: 0.5s;
+    animation: logoGirando 1s;
+    cursor: pointer;
+}
+
+@keyframes logoGirando {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate( 360deg);
+    }
+}
+
+.nav-link{
+    color: var(--cinza-linksHeader);
+    transition: 0.8s;
+    font-size: 20px;
+}
+
+.nav-link:hover{
+    color: var(--cinza-header-hover);
+    scale: 1.05;
+    transition: 0.8s;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#gear{
+    font-size: 35px;
+    color: var(--azul-claro-login-engrenagem-user-logo);
+}
+
+#user{
+    font-size: 35px;
+    color: var(--azul-claro-login-engrenagem-user-logo);
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+#gear:hover,
+#user:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    color: var(--azul-hoverIcons);
+}
+
+
+.gg{
+    background-color:white;
+    border-radius: 20px;
+    padding: 35px;
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+}
+
+.main_home{
+    background-color: #F0F0F0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.direita{
+    border-left: 3px solid #00639E;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.receitas{
+    background-color:white;
+    border-radius: 10px;
+    height: 75px;
+    width: 35%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #b2b2b2;
+    transition: 0.8s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.receitas:hover{
+    transform: scale(1.02);
+    background-color: #ededed;
+    transition: 0.8s;
+}
+
+.despesas:hover{
+    transform: scale(1.02);
+    background-color: #ededed;
+    transition: 0.8s;
+}
+.despesas{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 10px;
+    height: 75px;
+    width: 35%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #b2b2b2;
+    transition: 0.8s;
+}
+
+.tudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+}
+
+.verde{
+    font-size: 25px;
+    color: #09AF10;
+    font-weight: bold;
+}
+
+.vermelho{
+    color:#C50C0C;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nom{
+    color: #747B7E;
+}
+
+.info{
+    padding-left: 30px ;
+    padding-bottom: 20px;
+}
+
+#nombre{
+    color: #1B4965;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#saldo_home{
+    color:#747B7E;
+    font-size: 17px;
+}
+
+#saldo_real{
+    color:#00639E;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+
+.card:hover{
+    transform: scale(1.02);
+    background-color: #ededed;
+    transition: 0.8s;
+}
+.card{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 10px;
+    height: 125px;
+    width: 25%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #b2b2b2;
+    transition: 0.8s;
+}
+
+.ce{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.imgs_home{
+    height: 55px;
+    width: 55px;
+}
+
+.nome_ic{
+    padding-top: 10px;
+    font-size: 17px;
+    color:#747B7E;
+}
+
+#ac_rapido{
+    font-size: 17px;
+    color: #000000;
+}
+
+.part_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.risco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+}
+
+.baixinho1{
+    background-color: white;
+    height: 150px ;
+    border-radius: 10px;
+    width: 39%;
+    margin-right: 10px;
+}
+.baixinho2{
+    background-color: white;
+    height: 150px ;
+    border-radius: 10px;
+    width: 39%;
+    margin-left: 10px;
+}
+
+.tm_bx{
+    height: 35px;
+    width: 35px;
+}
+
+.dividi{
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #b2b2b2;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    height: 45px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+
+.dividi2{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dividi3{
+    margin: 0px;
+    color: #C50C0C;
+    font-size: 17px;
+}
+.dividi4{
+    margin: 0px;
+    color: #62B6CB;
+    font-size: 17px;
+}
+
+.decor{
+    font-size: 15px;
+    margin: 0px;
+}
+
+.dodo{
+    display: flex;
+    flex-direction: row;
+}
+
+.tt_bb{
+    color: #747B7E;
+}
